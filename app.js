@@ -9,7 +9,9 @@ btnSubmit.addEventListener("click", (e) => {
     checkedValueText.innerText =
       "এএএএহ আইছে! মারছে ফেল আবার রেজাল্ট দেখতে আইছে...ভাগ শালা!";
   } else {
-    if (parseFloat(resultNumber.value) === 100) {
+    if (parseFloat(resultNumber.value) > 100) {
+      checkedValueText.innerText = "Page Crashed! Please try again!";
+    } else if (parseFloat(resultNumber.value) === 100) {
       checkedValueText.innerText = "You are excellent!";
     } else if (parseFloat(resultNumber.value) >= 90) {
       checkedValueText.innerText = "You are GA+";
